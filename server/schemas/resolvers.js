@@ -20,7 +20,7 @@ const resolvers = {
     },
 
     team: async (parent, { teamId }) => {
-      return Profile.findOne({ _id: teamId });
+      return Team.findOne({ _id: teamId });
     },
 
 

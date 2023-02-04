@@ -1,5 +1,4 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
 
 // Import the `useParams()` hook
 import { useParams } from 'react-router-dom';
@@ -7,7 +6,7 @@ import { useQuery } from '@apollo/client';
 
 import { QUERY_SINGLE_USER } from '../utils/queries';
 
-const SingleUser = () => {
+const User = () => {
   // Use `useParams()` to retrieve value of the route parameter `:profileId`
   const { userId } = useParams();
 
@@ -22,21 +21,28 @@ const SingleUser = () => {
     return <div>Loading...</div>;
   }
   return (
-    <Card key={user.userId} border="dark">
-                {user.image ? (
-                  <Card.Img
-                    src={user.image}
-                    alt={`${user.name}`}
-                    variant="top"
-                  />
-                ) : null}
-                <Card.Body>
-                  <Card.Title>{user.name}</Card.Title>
-                  <p className="small">Title: {user.title}</p>
-                  <Card.Text>{user.description}</Card.Text>
-                </Card.Body>
-              </Card>
+      <div className="my-3">
+        <h3 className="card-header bg-dark text-light p-2 m-0">
+          {user.name} <br />
+          <span style={{ fontSize: '1rem' }}>
+            {user.title}
+          </span>
+        </h3>
+        <div className="bg-light py-4">
+          <blockquote
+            className="p-4"
+            style={{
+              fontSize: '1.5rem',
+              fontStyle: 'italic',
+              border: '2px dotted #1a1a1a',
+              lineHeight: '1.5',
+            }}
+          >
+            {user.description}
+          </blockquote>
+        </div>
+        </div>
   );
 };
 
-export default SingleUser;
+export default User;

@@ -1,13 +1,22 @@
 [
     
     {
-    "id": "1",
     "title": "Developer",
     "name": "Nick",
     "link": "",
     "description": "I am an aspiring devloper learning how to build full stack applications and websites. I am hoping to work as a junior devloper for a compay sometime soon!",
     "image": "",
     "email": "Nick_burns11@hotmail.com"
+
+  },
+
+  {
+    "title": "Developer",
+    "name": "Jared",
+    "link": "",
+    "description": "I am an aspiring devloper learning how to build full stack applications and websites. I am hoping to work as a junior devloper for a compay sometime soon!",
+    "image": "",
+    "email": "jaredingersoll14@gmail.com"
 
   }
 
