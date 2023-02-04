@@ -15,7 +15,7 @@ const resolvers = {
       throw new AuthenticationError('Not logged in');
     },
 
-    team: async () => {
+    teams: async () => {
       return Team.find();
     },
 
@@ -24,7 +24,7 @@ const resolvers = {
     },
 
 
-    user: async () => {
+    users: async () => {
       return User.find();
     },
 

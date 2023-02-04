@@ -9,3 +9,15 @@ export const QUERY_ME = gql`
     }
   }
 `;
+
+export const QUERY_SINGLE_USER = gql`
+  query getSingleUser($userId: ID!) {
+    thought(userId: $userId) {
+      _id
+      name
+      title
+      description
+      image
+    }
+  }
+`;

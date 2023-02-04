@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose");
 
-const userSchema = require("./User.js");
+const userSchema = require("./User");
 
 const teamSchema = new Schema({
   id: {
@@ -20,7 +20,12 @@ const teamSchema = new Schema({
     required: false,
   },
 
-  teamMembers: [userSchema],
+  teamMembers: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'User',
+    },
+  ],
 });
 
 const Team = model("Team", teamSchema);
